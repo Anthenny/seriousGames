@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #2e2e2e;
+  padding: 60px 290px;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+header .logo {
+  display: flex;
+  cursor: pointer;
+}
+
+header .logo h3 {
+  color: #ffdf00;
+  margin-left: 25px;
+  font-size: 2.6rem;
+}
+
+header nav {
+  display: flex;
+}
+
+header nav a {
+  color: #ffdf00;
+  font-size: 2.3rem;
+  font-weight: 600;
+  margin-left: 25px;
+  text-decoration: none;
+}
+
+header nav a.active {
+  color: white;
+}
+
+main {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 545px;
+  border-radius: 8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 25px 110px;
+}
+
+main h1 {
+  font-size: 3.4rem;
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+main form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+main form input {
+  padding: 10px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  font-size: 1.8rem;
+}
+
+main form input:focus {
+  outline: none;
+  border: 1px solid #ffdf00;
+}
+
+main form input::placeholder {
+  opacity: 0.7;
+}
+
+main form button {
+  color: black;
+  background-color: #ffdf00;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 10px;
+  width: 50%;
+  align-self: flex-end;
+  font-size: 2rem;
+  font-weight: 700;
+  transition: all 0.2s;
+  border: 1px solid #ffdf00;
+  text-align: center;
+}
+
+main form button:hover {
+  color: #ffdf00;
+  background-color: black;
+}
