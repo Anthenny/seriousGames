@@ -1,38 +1,4 @@
-@import "base";
-
-header {
-  display: flex;
-  justify-content: space-between;
-
-  .logo {
-    display: flex;
-    cursor: pointer;
-
-    h3 {
-      color: $mainColor;
-      margin-left: 25px;
-      font-size: 2.6rem;
-    }
-  }
-
-  nav {
-    display: flex;
-
-    a {
-      color: $mainColor;
-      font-size: 2.3rem;
-      font-weight: 600;
-      margin-left: 25px;
-      text-decoration: none;
-
-      &.active {
-        color: white;
-      }
-    }
-  }
-}
-
-main {
+.auth__container {
   background-color: rgba($color: #000000, $alpha: 0.5);
   width: 545px;
   border-radius: 8px;

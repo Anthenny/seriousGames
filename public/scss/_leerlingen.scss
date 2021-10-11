@@ -1,0 +1,176 @@
+.leerlingen__container {
+  padding-top: 150px;
+  .leerlingen__tabel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 65px;
+    width: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.67);
+    border-radius: 8px;
+
+    table {
+      border-radius: 8px;
+      border-collapse: collapse;
+      width: 100%;
+      background-color: rgba($color: #000000, $alpha: 0.67);
+      text-align: left;
+      overflow: hidden;
+      margin-bottom: 30px;
+      width: 100%;
+
+      thead {
+        color: $mainColor;
+
+        th {
+          padding: 1rem 2rem;
+          text-transform: uppercase;
+          letter-spacing: 0.1rem;
+          font-size: 2.4rem;
+          font-weight: 500;
+        }
+      }
+
+      tr {
+        color: $mainColor;
+        width: 100&;
+      }
+
+      td {
+        padding: 1.3rem 2rem;
+        font-size: 1.8rem;
+      }
+
+      .btn {
+        border: 1px solid black;
+        border-radius: 8px;
+        background-color: red;
+        padding: 0.4rem 1.4rem;
+        text-align: center;
+        font-size: 1.8rem;
+        cursor: pointer;
+        margin-right: 10px;
+
+        &-edit {
+          background-color: $edit;
+          border: $edit;
+          color: white;
+        }
+
+        &-delete {
+          background-color: $delete;
+          border: 1px solid $delete;
+          color: white;
+        }
+      }
+    }
+
+    .btn-maak-gebruiker {
+      padding: 1rem 2rem;
+      color: white;
+      cursor: pointer;
+      text-align: center;
+      background-color: $mainColor;
+      border: #70b7ff;
+      font-size: 2rem;
+      border-radius: 8px;
+
+      width: 250px;
+      align-self: flex-end;
+    }
+
+    // @media (max-width: 1800px) {
+    //   padding: 30px 60px;
+    //   background-color: transparent;
+    //   box-shadow: none;
+    // }
+  }
+
+  .modal-maak-leerling {
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+
+    .box {
+      background-color: white;
+      width: 500px;
+      // height: 415px;
+      border-radius: 8px;
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      transform: translate(50%, -50%);
+      padding: 30px 60px;
+
+      .header {
+        position: relative;
+
+        .close-personeel {
+          position: absolute;
+          top: 13%;
+          right: 3%;
+          font-size: 1.8rem;
+          cursor: pointer;
+        }
+
+        h1 {
+          font-weight: 400;
+          font-size: 2.2rem;
+          margin-bottom: 25px;
+        }
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+
+        .item {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 20px;
+
+          p {
+            font-size: 2rem;
+            font-weight: 300;
+          }
+
+          input {
+            border: 0.5px solid $mainColor;
+            padding: 10px 20px;
+            border-radius: 8px;
+            opacity: 0.8;
+
+            &:focus {
+              outline: 0.3px solid $mainColor;
+            }
+          }
+        }
+
+        button {
+          color: white;
+          font-size: 1.8rem;
+          text-align: center;
+          background-color: $mainColor;
+          padding: 10px 20px;
+          border-radius: 8px;
+          cursor: pointer;
+          transition: all ease 0.2s;
+          border: 1px solid $mainColor;
+          width: 50%;
+          align-self: flex-end;
+
+          &:hover {
+            color: $mainColor;
+            background-color: white;
+          }
+        }
+      }
+    }
+  }
+}

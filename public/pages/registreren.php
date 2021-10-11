@@ -11,7 +11,7 @@
 
 ?>
 
-    <main>
+    <div class="auth__container">
       <h1>Registreren</h1>
       <form  action="<?= $_SERVER["PHP_SELF"]; ?>" method="post">
         <input type="text" name="naam" placeholder="Vul jouw naam in" />
@@ -21,7 +21,7 @@
         <input type="password" name="bevestigWachtwoord" placeholder="Bevestig jouw wachtwoord" />
         <button type="submit" name="registreren">Registreren</button>
       </form>
-    </main>
+    </div>
 
 <?php
   require_once '../components/authFooter.php';

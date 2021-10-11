@@ -1,0 +1,429 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #2e2e2e;
+  padding: 60px 290px;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+a {
+  text-decoration: none;
+  list-style: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+header .logo {
+  display: flex;
+  cursor: pointer;
+}
+
+header .logo h3 {
+  color: #ffdf00;
+  margin-left: 25px;
+  font-size: 2.6rem;
+}
+
+header nav {
+  display: flex;
+}
+
+header nav a,
+header nav button {
+  color: #ffdf00;
+  font-size: 2.3rem;
+  font-weight: 600;
+  margin-left: 25px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+header nav a.active,
+header nav button.active {
+  color: white;
+}
+
+header nav button {
+  border: none;
+  background-color: transparent;
+}
+
+.auth__container {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 545px;
+  border-radius: 8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 25px 110px;
+}
+
+.auth__container h1 {
+  font-size: 3.4rem;
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.auth__container form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.auth__container form input {
+  padding: 10px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  font-size: 1.8rem;
+}
+
+.auth__container form input:focus {
+  outline: none;
+  border: 1px solid #ffdf00;
+}
+
+.auth__container form input::placeholder {
+  opacity: 0.7;
+}
+
+.auth__container form button {
+  color: black;
+  background-color: #ffdf00;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 10px;
+  width: 50%;
+  align-self: flex-end;
+  font-size: 2rem;
+  font-weight: 700;
+  transition: all 0.2s;
+  border: 1px solid #ffdf00;
+  text-align: center;
+}
+
+.auth__container form button:hover {
+  color: #ffdf00;
+  background-color: black;
+}
+
+body .home__container {
+  padding: 50px 0;
+  color: white;
+}
+
+body .home__container .header {
+  margin-bottom: 30px;
+  font-size: 3rem;
+}
+
+body .home__container .paragraph {
+  font-size: 1.6rem;
+}
+
+body .home__container .card {
+  padding: 15px;
+  border-radius: 8px;
+  width: 40%;
+}
+
+body .home__container .top {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+body .home__container .top .home__img {
+  width: 40%;
+  overflow: hidden;
+}
+
+body .home__container .top .home__over-ons {
+  background-color: #209bd2;
+}
+
+body .home__container .bot {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+body .home__container .bot .home__nieuws-bericht {
+  background-color: #a80505;
+}
+
+body .home__container .bot .home__spellen {
+  background-color: #ffd500;
+  padding-bottom: 50px;
+}
+
+body .home__container .bot .home__spellen p {
+  margin-bottom: 20px;
+}
+
+body .home__container .bot .home__spellen a {
+  color: black;
+  background-color: #ffe250;
+  text-decoration: none;
+  padding: 10px 10px;
+  border-radius: 8px;
+  font-size: 2rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 1600px) {
+  body {
+    padding: 60px 100;
+  }
+}
+
+.leerlingen__container {
+  padding-top: 150px;
+}
+
+.leerlingen__container .leerlingen__tabel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 65px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.67);
+  border-radius: 8px;
+}
+
+.leerlingen__container .leerlingen__tabel table {
+  border-radius: 8px;
+  border-collapse: collapse;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.67);
+  text-align: left;
+  overflow: hidden;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.leerlingen__container .leerlingen__tabel table thead {
+  color: #ffdf00;
+}
+
+.leerlingen__container .leerlingen__tabel table thead th {
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+.leerlingen__container .leerlingen__tabel table tr {
+  color: #ffdf00;
+  width: 100 .leerlingen__container .leerlingen__tabel table tr;
+}
+
+.leerlingen__container .leerlingen__tabel table td {
+  padding: 1.3rem 2rem;
+  font-size: 1.8rem;
+}
+
+.leerlingen__container .leerlingen__tabel table .btn {
+  border: 1px solid black;
+  border-radius: 8px;
+  background-color: red;
+  padding: 0.4rem 1.4rem;
+  text-align: center;
+  font-size: 1.8rem;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.leerlingen__container .leerlingen__tabel table .btn-edit {
+  background-color: #0077ff;
+  border: #0077ff;
+  color: white;
+}
+
+.leerlingen__container .leerlingen__tabel table .btn-delete {
+  background-color: #eb0000;
+  border: 1px solid #eb0000;
+  color: white;
+}
+
+.leerlingen__container .leerlingen__tabel .btn-maak-gebruiker {
+  padding: 1rem 2rem;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  background-color: #ffdf00;
+  border: #70b7ff;
+  font-size: 2rem;
+  border-radius: 8px;
+  width: 250px;
+  align-self: flex-end;
+}
+
+.leerlingen__container .modal-maak-leerling {
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.leerlingen__container .modal-maak-leerling .box {
+  background-color: white;
+  width: 500px;
+  border-radius: 8px;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  padding: 30px 60px;
+}
+
+.leerlingen__container .modal-maak-leerling .box .header {
+  position: relative;
+}
+
+.leerlingen__container .modal-maak-leerling .box .header .close-personeel {
+  position: absolute;
+  top: 13%;
+  right: 3%;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.leerlingen__container .modal-maak-leerling .box .header h1 {
+  font-weight: 400;
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+}
+
+.leerlingen__container .modal-maak-leerling .box form {
+  display: flex;
+  flex-direction: column;
+}
+
+.leerlingen__container .modal-maak-leerling .box form .item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.leerlingen__container .modal-maak-leerling .box form .item p {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.leerlingen__container .modal-maak-leerling .box form .item input {
+  border: 0.5px solid #ffdf00;
+  padding: 10px 20px;
+  border-radius: 8px;
+  opacity: 0.8;
+}
+
+.leerlingen__container .modal-maak-leerling .box form .item input:focus {
+  outline: 0.3px solid #ffdf00;
+}
+
+.leerlingen__container .modal-maak-leerling .box form button {
+  color: white;
+  font-size: 1.8rem;
+  text-align: center;
+  background-color: #ffdf00;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all ease 0.2s;
+  border: 1px solid #ffdf00;
+  width: 50%;
+  align-self: flex-end;
+}
+
+.leerlingen__container .modal-maak-leerling .box form button:hover {
+  color: #ffdf00;
+  background-color: white;
+}
+
+.edit__container {
+  padding: 75px 160px;
+  color: #ffdf00;
+}
+
+.edit__container .form__container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.edit__container .form__container h1 {
+  font-weight: 400;
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.edit__container .form__container form {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.edit__container .form__container form .item {
+  display: flex;
+  width: 40%;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.edit__container .form__container form .item p {
+  margin-right: 20px;
+  text-align: left;
+  font-weight: 300;
+}
+
+.edit__container .form__container form .item input {
+  border: 0.5px solid #ffdf00;
+  padding: 8px 16px;
+  font-size: 1.6rem;
+  border-radius: 8px;
+  opacity: 0.8;
+}
+
+.edit__container .form__container form .item input:focus {
+  outline: none;
+  border: 1px solid #ffdf00;
+}
+
+.edit__container .form__container form button {
+  width: 200px;
+  align-self: center;
+  border: 1px solid #ffdf00;
+  color: black;
+  font-size: 2rem;
+  text-align: center;
+  background-color: #ffdf00;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+}
