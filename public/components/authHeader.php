@@ -28,15 +28,16 @@
 
             <a href="./login.php">Inloggen</a>
             <a href="./registreren.php">Registreren</a>
-            <?php } else { ?>
-              
-              <a href="#">Games</a>
+            <?php } elseif($_SESSION["rol"] === "leraar") { ?>
+              <a href="./leerlingen.php">Leerlingen</a>
+            <?php  } else { ?>
+              <a href="./game.php">Game</a>
+            <?php } if(isset($_SESSION["naam"])) { ?>
+
               <form action="<?= $_SERVER["PHP_SELF"]; ?>" method="post">>
-                <a href="./leerlingen.php">Leerlingen</a>
                 <button type="submit" name="uitloggen">Uitloggen</button>
               </form>
-
-          <?php  } ?>
+            <?php } ?> 
 
       </nav>
     </header>

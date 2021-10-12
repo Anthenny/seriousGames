@@ -5,7 +5,7 @@ require_once(__DIR__.'/../config/db.php');
 class Gebruikers extends Db {
   
     public function getGebruikers() {
-      $sql = "SELECT * FROM gebruikers";
+      $sql = "SELECT * FROM gebruikers WHERE rol = 'student'";
       $stmt = $this->connect()->prepare($sql);
       $stmt->execute();
       

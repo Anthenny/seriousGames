@@ -6,7 +6,7 @@
   $gebruikerView = new GebruikerView();
   $gebruikerController = new GebruikerContr();
 
-  if(isset($_GET["deleteLeerlingId"])) $gebruikerController->removeGebruiker();
+  if(isset($_GET["deleteLeerlingId"]))  $gebruikerController->removeGebruiker();
   if(isset($_POST["add"])) $gebruikerController->maakGebruiker();
 
 ?>
@@ -14,7 +14,7 @@
 <div class="leerlingen__container">
     <div class="leerlingen__tabel">
             <table>
-              <thead>
+              <thead> 
                 <th>ID</th>
                 <th>Naam</th>
                 <th>Klas</th>
@@ -37,10 +37,10 @@
                 <?php } ?>
               </tbody>
             </table>
-            <button class="btn-maak-gebruiker">Maak een leerling</button>
+            <button class="btn-leerling">Maak een leerling</button>
           </div>
 
-          <div class="modal-maak-leerling">
+          <div class="modal-leerling">
             <div class="box">
               <div class="header">
                 <div class="close-leerling"><p>X</p></div>
@@ -58,7 +58,7 @@
                 </div>
                 <div class="item">
                   <p>Klas</p>
-                  <input type="password" name="klas" />
+                  <input type="text" name="klas" />
                 </div>
                 <div class="item">
                   <p>Wachtwoord</p>

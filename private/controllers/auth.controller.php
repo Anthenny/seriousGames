@@ -38,6 +38,7 @@ class AuthContr extends Auth {
 
             session_start();
             $_SESSION["naam"] = $gebruiker["naam"];
+            $_SESSION["rol"] = $gebruiker["rol"];
             
             if($gebruiker["rol"] === "student") {
                 header('location: ../../public/pages/home.php');

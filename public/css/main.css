@@ -262,7 +262,7 @@ body .home__container .bot .home__spellen a {
   color: white;
 }
 
-.leerlingen__container .leerlingen__tabel .btn-maak-gebruiker {
+.leerlingen__container .leerlingen__tabel .btn-leerling {
   padding: 1rem 2rem;
   color: white;
   cursor: pointer;
@@ -275,7 +275,7 @@ body .home__container .bot .home__spellen a {
   align-self: flex-end;
 }
 
-.leerlingen__container .modal-maak-leerling {
+.leerlingen__container .modal-leerling {
   display: none;
   height: 100vh;
   width: 100vw;
@@ -287,8 +287,9 @@ body .home__container .bot .home__spellen a {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-.leerlingen__container .modal-maak-leerling .box {
-  background-color: white;
+.leerlingen__container .modal-leerling .box {
+  background-color: black;
+  color: #ffdf00;
   width: 500px;
   border-radius: 8px;
   position: absolute;
@@ -298,11 +299,11 @@ body .home__container .bot .home__spellen a {
   padding: 30px 60px;
 }
 
-.leerlingen__container .modal-maak-leerling .box .header {
+.leerlingen__container .modal-leerling .box .header {
   position: relative;
 }
 
-.leerlingen__container .modal-maak-leerling .box .header .close-personeel {
+.leerlingen__container .modal-leerling .box .header .close-leerling {
   position: absolute;
   top: 13%;
   right: 3%;
@@ -310,40 +311,42 @@ body .home__container .bot .home__spellen a {
   cursor: pointer;
 }
 
-.leerlingen__container .modal-maak-leerling .box .header h1 {
+.leerlingen__container .modal-leerling .box .header h1 {
   font-weight: 400;
   font-size: 2.2rem;
   margin-bottom: 25px;
 }
 
-.leerlingen__container .modal-maak-leerling .box form {
+.leerlingen__container .modal-leerling .box form {
   display: flex;
   flex-direction: column;
 }
 
-.leerlingen__container .modal-maak-leerling .box form .item {
+.leerlingen__container .modal-leerling .box form .item {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
 }
 
-.leerlingen__container .modal-maak-leerling .box form .item p {
+.leerlingen__container .modal-leerling .box form .item p {
   font-size: 2rem;
   font-weight: 300;
 }
 
-.leerlingen__container .modal-maak-leerling .box form .item input {
+.leerlingen__container .modal-leerling .box form .item input {
   border: 0.5px solid #ffdf00;
   padding: 10px 20px;
   border-radius: 8px;
   opacity: 0.8;
 }
 
-.leerlingen__container .modal-maak-leerling .box form .item input:focus {
-  outline: 0.3px solid #ffdf00;
+.leerlingen__container .modal-leerling .box form .item input:focus {
+  border: 0.3px solid #ffdf00;
+  border-radius: 8px;
+  outline: none;
 }
 
-.leerlingen__container .modal-maak-leerling .box form button {
+.leerlingen__container .modal-leerling .box form button {
   color: white;
   font-size: 1.8rem;
   text-align: center;
@@ -357,7 +360,7 @@ body .home__container .bot .home__spellen a {
   align-self: flex-end;
 }
 
-.leerlingen__container .modal-maak-leerling .box form button:hover {
+.leerlingen__container .modal-leerling .box form button:hover {
   color: #ffdf00;
   background-color: white;
 }
@@ -426,4 +429,134 @@ body .home__container .bot .home__spellen a {
   border-radius: 8px;
   cursor: pointer;
   margin-top: 20px;
+}
+
+.game__container {
+  margin-top: 50px;
+  padding: 10px 30px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.67);
+  border-radius: 8px;
+}
+
+.game__container .game__container__header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  color: white;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+.game__container form {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.game__container form .form__item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.game__container form .form__item .question {
+  color: #ffdf00;
+  font-size: 2.8rem;
+  font-weight: 600;
+}
+
+.game__container form .form__item input {
+  border: 1px solid #ffdf00;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1.6rem;
+  color: #ffdf00;
+  background-color: black;
+}
+
+.game__container form .form__item input::placeholder {
+  color: #ffdf00;
+}
+
+.game__container form .form__item input:focus {
+  border: 1px solid #ffdf00;
+  border-radius: 8px;
+  outline: none;
+}
+
+.game__container form button {
+  margin-top: 10px;
+  color: black;
+  background-color: #ffdf00;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 2rem;
+  text-align: center;
+  padding: 10px 20px;
+  transition: all ease 0.2s;
+  border: 1px solid #ffdf00;
+  align-self: flex-end;
+}
+
+.game-uitslag__container {
+  margin-top: 50px;
+  padding: 10px 30px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.67);
+  border-radius: 8px;
+}
+
+.game-uitslag__container .game-uitslag__container__header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  color: white;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+.game-uitslag__container .game-uitslag__container__content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.game-uitslag__container .game-uitslag__container__content h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #ffdf00;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.game-uitslag__container .game-uitslag__container__content h3 {
+  font-size: 2.6rem;
+  font-weight: 600;
+  color: #ffdf00;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.game-uitslag__container .game-uitslag__container__content p {
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.game-uitslag__container .game-uitslag__container__content a {
+  cursor: pointer;
+  color: black;
+  background-color: #ffdf00;
+  padding: 10px 20px;
+  text-align: center;
+  align-self: center;
+  font-size: 2rem;
+  border-radius: 8px;
+  font-size: 700;
+  margin-bottom: 30px;
 }
