@@ -1,0 +1,36 @@
+SET FOREIGN_KEY_CHECKS = 0;
+DROP TABLE IF EXISTS `gebruikers`;
+DROP TABLE IF EXISTS `klassen`;
+DROP TABLE IF EXISTS `games`;
+DROP TABLE IF EXISTS `klas_regel`;
+SET FOREIGN_KEY_CHECKS = 1;
+
+CREATE TABLE `gebruikers` (
+    `id` INTEGER(11) NOT NULL,
+    `naam` VARCHAR(50) NOT NULL,
+    `rol` VARCHAR(20) NOT NULL,
+    `email` VARCHAR(30) NOT NULL,
+    `wachtwoord` VARCHAR(255) NOT NULL,
+    `klas_id` INTEGER(11) NOT NULL,
+    PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `klassen` (
+    `klas_id` INTEGER(11) NOT NULL,
+    `klas_naam` INTEGER NOT NULL,
+    `id` INTEGER(11) NOT NULL,
+    PRIMARY KEY (`klas_id`)
+);
+
+CREATE TABLE `games` (
+    `game_id` INTEGER(11) NOT NULL,
+    `score` INTEGER NOT NULL,
+    `id` INTEGER(11) NOT NULL,
+    PRIMARY KEY (`game_id`)
+);
+
+CREATE TABLE `klas_regel` (
+    `id` INTEGER(1) NOT NULL,
+    `klas_id` INTEGER(11) NOT NULL,
+    PRIMARY KEY (`id`, `klas_id`)
+);

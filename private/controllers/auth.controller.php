@@ -9,6 +9,8 @@ class AuthContr extends Auth {
         $this->klas = $_POST["klas"];
         $this->rol = "student";
         $this->wachtwoord = $_POST["wachtwoord"];
+
+        // Als je een student maakt hoe moet je dan hem dan toevoegen aan een klas (een naam invoeren zoals groep 8?) hoe pak je dan die naam met id om het automatisch te updaten in je database?
  
         $hashedWachtwoord = password_hash($this->wachtwoord, PASSWORD_BCRYPT);
 

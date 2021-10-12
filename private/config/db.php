@@ -5,7 +5,7 @@
   private $gebruikersNaam = "root";
   private $wachtwoord = "";
   private $host = "localhost";
-  private $dbName = "seriousgames";
+  private $dbName = "seriousgamesv1";
 
   public function connect() {
     try {
