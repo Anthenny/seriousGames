@@ -2,7 +2,6 @@
 
 require_once(__DIR__.'/../config/db.php');
 
-
 class Auth extends Db {
     protected $naam;
     protected $email;

@@ -4,7 +4,6 @@ require_once(__DIR__.'/../models/gebruikers.model.php');
 
 class GebruikerContr extends Gebruikers {
 
-
   public function maakGebruiker() {
     $this->naam = $_POST["naam"];
     $this->email = $_POST["email"];

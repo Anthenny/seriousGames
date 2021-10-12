@@ -2,15 +2,19 @@
     require_once '../../private/init.php';
     $paginaTitel = 'Reken Game';
     require_once '../components/authHeader.php';
+
+    $gameController = new GameController();
+
+    if(isset($_POST["submitGame"])) $gameController->saveGame();
 ?>
     
     <div class="game__container">
         <div class="game__container__header">
             <h3>Reken games</h3>
             <h3>Groep 8</h3>
-            <h3>Anthenny de Hoon</h3>
+            <h3><?= $_SESSION["naam"] ?></h3>
         </div>
-        <form action="">
+        <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
             <div class="form__item">
                 <div class="question">87 x 4 - 3</div>
                 <input type="text" name="q1" placeholder="Vul jouw antwoord in">
@@ -50,6 +54,7 @@
             <div class="form__item">
                 <div class="question">47 x 1 - 3</div>
                 <input type="text" name="q10" placeholder="Vul jouw antwoord in">
+                <input type="hidden" name="id" value="<?= $_SESSION["studentId"] ?>">
             </div>
             <button type="submit" name="submitGame">Submit</button>
         </form>

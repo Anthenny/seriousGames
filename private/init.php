@@ -3,6 +3,7 @@
 // Include once Controllers
 require_once 'controllers/auth.controller.php';
 require_once 'controllers/gebruiker.controller.php';
+require_once 'controllers/game.controller.php';
 
 // Include once View
 require_once 'view/gebruikers.view.php';

@@ -10,7 +10,7 @@ class AuthContr extends Auth {
         $this->rol = "student";
         $this->aantalGames = 0;
         $this->wachtwoord = $_POST["wachtwoord"];
-
+ 
         $hashedWachtwoord = password_hash($this->wachtwoord, PASSWORD_BCRYPT);
 
         $this->setGebruiker($this->naam, $this->email, $this->klas, $this->rol, $this->aantalGames, $hashedWachtwoord );
@@ -39,6 +39,7 @@ class AuthContr extends Auth {
             session_start();
             $_SESSION["naam"] = $gebruiker["naam"];
             $_SESSION["rol"] = $gebruiker["rol"];
+            $_SESSION["studentId"] = $gebruiker["id"];
             
             if($gebruiker["rol"] === "student") {
                 header('location: ../../public/pages/home.php');
