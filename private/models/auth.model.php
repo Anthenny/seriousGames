@@ -7,7 +7,6 @@ class Auth extends Db {
     protected $email;
     protected $klas;
     protected $rol;
-    protected $aantalGames;
     protected $wachtwoord;
 
     protected function getGebruikers() {
@@ -28,9 +27,9 @@ class Auth extends Db {
         return $result;
     }
 
-    protected function setGebruiker($naam, $email, $klas, $rol, $aantalGames, $wachtwoord) {
-        $sql = "INSERT INTO gebruikers (naam, email, klas, rol, aantalGames, wachtwoord) VALUES (?, ?, ?, ?, ?, ?)";
+    protected function setGebruiker($naam, $email, $klas, $rol, $wachtwoord) {
+        $sql = "INSERT INTO gebruikers (naam, email, klas, rol, wachtwoord) VALUES (?, ?, ?, ?, ?, ?)";
         $stmt = $this->connect()->prepare($sql);
-        $stmt->execute([$naam, $email, $klas, $rol, $aantalGames, $wachtwoord]); 
+        $stmt->execute([$naam, $email, $klas, $rol, $wachtwoord]); 
     }
 }

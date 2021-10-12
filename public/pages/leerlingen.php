@@ -18,7 +18,7 @@
                 <th>ID</th>
                 <th>Naam</th>
                 <th>Klas</th>
-                <th>Aantal games</th>
+                <th>email</th>
                 <th>Actie</th>
               </thead>
               <tbody> 
@@ -28,7 +28,7 @@
                   <td><?php echo $gebruiker['id'] ?></td>
                   <td><?php echo $gebruiker['naam'] ?></td>
                   <td><?php echo $gebruiker['klas'] ?></td>
-                  <td><?php echo $gebruiker['aantalGames'] ?></td>
+                  <td><?php echo $gebruiker['email'] ?></td>
                   <td class="buttons">
                     <a href="editLeerling.php?editLeerlingId=<?= $gebruiker['id']?>" class="btn btn-edit">Edit</a>
                     <a href="leerlingen.php?deleteLeerlingId=<?= $gebruiker['id']?>" class="btn btn-delete">Delete</a>

@@ -8,12 +8,11 @@ class AuthContr extends Auth {
         $this->email = $_POST["email"];
         $this->klas = $_POST["klas"];
         $this->rol = "student";
-        $this->aantalGames = 0;
         $this->wachtwoord = $_POST["wachtwoord"];
  
         $hashedWachtwoord = password_hash($this->wachtwoord, PASSWORD_BCRYPT);
 
-        $this->setGebruiker($this->naam, $this->email, $this->klas, $this->rol, $this->aantalGames, $hashedWachtwoord );
+        $this->setGebruiker($this->naam, $this->email, $this->klas, $this->rol, $hashedWachtwoord );
         header('location: ../../public/pages/login.php');
     }
 
