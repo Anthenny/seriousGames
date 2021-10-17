@@ -36,6 +36,12 @@
       }
     }
 
+    select {
+      margin-bottom: 30px;
+      border-radius: 8px;
+      font-size: 1.8rem;
+    }
+
     button {
       color: black;
       background-color: $mainColor;

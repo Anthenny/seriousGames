@@ -5,7 +5,7 @@ require_once(__DIR__.'/../models/game.model.php');
 class GameController extends Game {
 
     public function saveGame() {
-        $juisteAntwoorden = ["10", "10", "10", "10", "10", "10", "10", "10", "10", "10"];
+        $juisteAntwoorden = ["345", "506", "81", "24", "19", "385", "105", "145", "51", "44"];
         $score = 0;
         $question_1 = $_POST["q1"];
         $question_2 = $_POST["q2"];

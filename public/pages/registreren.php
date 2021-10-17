@@ -10,13 +10,12 @@
   }
 
 ?>
-
+ 
     <div class="auth__container">
       <h1>Registreren</h1>
       <form  action="<?= $_SERVER["PHP_SELF"]; ?>" method="post">
         <input type="text" name="naam" placeholder="Vul jouw naam in" />
         <input type="email" name="email" placeholder="Vul jouw email in" />
-        <label for="klasId"> Kies jouw klas</label>
         <select name="klasId" id="klasId">
           <option value="1">Groep 1</option>
           <option value="2">Groep 2</option>

@@ -4,7 +4,7 @@
     require_once '../components/authHeader.php';
 
     $gameController = new GameController();
-
+ 
     if(isset($_POST["submitGame"])) $gameController->saveGame();
 ?>
     
