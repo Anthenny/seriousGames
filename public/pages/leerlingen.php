@@ -27,7 +27,7 @@
                 <tr>
                   <td><?php echo $gebruiker['id'] ?></td>
                   <td><?php echo $gebruiker['naam'] ?></td>
-                  <td><?php echo $gebruiker['klas'] ?></td>
+                  <td><?php echo $gebruiker['klas_naam'] ?></td>
                   <td><?php echo $gebruiker['email'] ?></td>
                   <td class="buttons">
                     <a href="editLeerling.php?editLeerlingId=<?= $gebruiker['id']?>" class="btn btn-edit">Edit</a>
@@ -58,7 +58,7 @@
                 </div>
                 <div class="item">
                   <p>Klas</p>
-                  <input type="text" name="klas" />
+                  <input type="text" name="klasId" />
                 </div>
                 <div class="item">
                   <p>Wachtwoord</p>

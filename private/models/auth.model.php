@@ -5,7 +5,7 @@ require_once(__DIR__.'/../config/db.php');
 class Auth extends Db {
     protected $naam;
     protected $email;
-    protected $klas;
+    protected $klasId;
     protected $rol;
     protected $wachtwoord;
 
@@ -17,7 +17,7 @@ class Auth extends Db {
         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return $results;
     }
-
+ 
     protected function getGebruiker($email) {
         $sql = "SELECT * FROM gebruikers WHERE email = ?";
         $stmt = $this->connect()->prepare($sql);
@@ -27,9 +27,9 @@ class Auth extends Db {
         return $result;
     }
 
-    protected function setGebruiker($naam, $email, $klas, $rol, $wachtwoord) {
-        $sql = "INSERT INTO gebruikers (naam, email, klas, rol, wachtwoord) VALUES (?, ?, ?, ?, ?, ?)";
+    protected function setGebruiker($naam, $email, $klasId, $rol, $wachtwoord) {
+        $sql = "INSERT INTO gebruikers (naam, email, klas_id, rol, wachtwoord) VALUES (?, ?, ?, ?, ?)";
         $stmt = $this->connect()->prepare($sql);
-        $stmt->execute([$naam, $email, $klas, $rol, $wachtwoord]); 
+        $stmt->execute([$naam, $email, $klasId, $rol, $wachtwoord]); 
     }
 }

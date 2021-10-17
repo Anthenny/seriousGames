@@ -6,15 +6,13 @@ class AuthContr extends Auth {
     public function createGebruiker() {
         $this->naam = $_POST["naam"];
         $this->email = $_POST["email"];
-        $this->klas = $_POST["klas"];
-        $this->rol = "student";
+        $this->klasId = $_POST["klasId"];
+        $this->rol = "student"; 
         $this->wachtwoord = $_POST["wachtwoord"];
-
-        // Als je een student maakt hoe moet je dan hem dan toevoegen aan een klas (een naam invoeren zoals groep 8?) hoe pak je dan die naam met id om het automatisch te updaten in je database?
  
         $hashedWachtwoord = password_hash($this->wachtwoord, PASSWORD_BCRYPT);
 
-        $this->setGebruiker($this->naam, $this->email, $this->klas, $this->rol, $hashedWachtwoord );
+        $this->setGebruiker($this->naam, $this->email, $this->klasId, $this->rol, $hashedWachtwoord );
         header('location: ../../public/pages/login.php');
     }
 

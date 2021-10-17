@@ -7,14 +7,13 @@ class GebruikerContr extends Gebruikers {
   public function maakGebruiker() {
     $this->naam = $_POST["naam"];
     $this->email = $_POST["email"];
-    $this->klas = $_POST["klas"];
+    $this->klasId = $_POST["klasId"];
     $this->rol = "student";
-    $this->aantalGames = 0;
     $this->wachtwoord = $_POST["wachtwoord"];
 
     $hashedWachtwoord = password_hash($this->wachtwoord, PASSWORD_BCRYPT);
 
-    $this->setGebruiker($this->naam, $this->email, $this->klas, $this->rol, $this->aantalGames, $hashedWachtwoord );
+    $this->setGebruiker($this->naam, $this->email, $this->klasId, $this->rol, $this->aantalGames, $hashedWachtwoord );
     header("Location: ../../public/pages/leerlingen.php");
   }
 

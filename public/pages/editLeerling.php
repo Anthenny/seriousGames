@@ -25,7 +25,7 @@
                 </div>
                 <div class="item">
                     <p>Klas :</p>
-                    <input type="text" name="klas" value="<?= $gebruiker["klas"] ?>" />
+                    <input type="text" name="klasId" value="<?= $gebruiker["klas_id"] ?>" />
                 </div>
                 <div class="item">
                     <p>Rol :</p>

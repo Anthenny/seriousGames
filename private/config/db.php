@@ -4,12 +4,10 @@
 
   private $gebruikersNaam = "root";
   private $wachtwoord = "";
-  private $host = "localhost";
-  private $dbName = "seriousgamesv1";
 
   public function connect() {
     try {
-      $dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->dbName;
+      $dsn = 'mysql:host=localhost;dbname=seriousgames';
       $pdo = new PDO($dsn, $this->gebruikersNaam, $this->wachtwoord);
       $pdo->setAttribute(PDO::ERRMODE_EXCEPTION, PDO::ATTR_CASE);
       return $pdo;
